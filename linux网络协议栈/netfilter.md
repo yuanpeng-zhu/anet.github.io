@@ -159,9 +159,9 @@ Netfilter 中的数据包处理规则是通过表（table）和链（chain）组
 4. **PREROUTING**：在路由决定之前处理入站流量，通常用于 NAT。
 5. **POSTROUTING**：在路由决定之后处理出站流量，通常用于 NAT。
 可以发现，五条链域linux的钩子点一一对应！
-![alt text](image.png)
+![alt text](../picture/image.png)
 四表五链实现的功能如上图所示。
-![alt text](image-1.png)
+![alt text](../picture/image-1.png)
 四表五链实现的对应关系如上图所示。
 #### 3.1. raw 表
 **原理**：`raw` 表主要用于在数据包处理的早期阶段进行一些简单的处理，例如决定数据包是否进行连接追踪（Connection Tracking）。这是 iptables 数据包过滤框架中的一个早期处理阶段。

@@ -2,7 +2,7 @@
 
 ## 一、三次握手的过程
 
-![alt text](<Pasted image 20240925093358.png>)
+![[../picture/Pasted image 20240925093358.png]]
 
 第一次握手：
 客户端将TCP报文标志位SYN置为1，随机产生一个序号值seq=J，保存在TCP首部的序列号(Sequence Number)字段里，指明客户端打算连接的服务器的端口，并将该数据包发送给服务器端，发送完毕后，客户端进入SYN_SENT状态，等待服务器端确认。

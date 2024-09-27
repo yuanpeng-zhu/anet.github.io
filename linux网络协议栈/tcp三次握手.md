@@ -2,7 +2,8 @@
 
 ## 一、三次握手的过程
 
-![[../picture/Pasted image 20240925093358.png]]
+<!-- ![[../picture/Pasted image 20240925093358.png]] -->
+![alt text](../picture/Pasted%20image%2020240925093358.png)
 
 第一次握手：
 客户端将TCP报文标志位SYN置为1，随机产生一个序号值seq=J，保存在TCP首部的序列号(Sequence Number)字段里，指明客户端打算连接的服务器的端口，并将该数据包发送给服务器端，发送完毕后，客户端进入SYN_SENT状态，等待服务器端确认。
@@ -331,7 +332,7 @@ struct request_sock_queue {
     truct listen_sock *listen opt;
 };
 ```
-![alt text](<Pasted image 20240925104149.png>)
+![alt text](<../picture/Pasted image 20240925104149.png>)
 `listen`最主要的⼯作就是申请和初始化接收队列，包括全连接队列和半连接队列。其中全连接队列是⼀个链表，⽽半连接队列由于需要快速地查找，所以使⽤的是⼀个哈希表（其实半连接队列更准确的叫法应该叫半连接哈希表）。
 半连接队列长度为`sysctl_somaxconn`与 `backlog`最小值+1向上取整到2的N次幂。
 半连接队列长度为`sysctl_somaxconn`与 `backlog`最小值。

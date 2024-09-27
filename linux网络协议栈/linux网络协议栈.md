@@ -1,9 +1,12 @@
 # linux 网络协议栈
 
+![[Pasted image 20240926142255.png]]
+
 ## 一、网络协议分层
 
 网络协议分层通常采用分层模型来组织和简化网络通信的复杂性。最常见的分层模型是 OSI 模型和 TCP/IP 模型。
-![[../picture/Pasted image 20240925210807.png]]
+<!-- ![[../picture/Pasted image 20240925210807.png]] -->
+![alt text](../picture/Pasted%20image%2020240925210807.png)
 ### OSI 模型（七层）
 1. **物理层**：传输原始比特流，涉及硬件设备和电气信号。
 2. **数据链路层**：提供节点间的数据传输，处理帧的错误检测和修正。
@@ -26,13 +29,15 @@
 
 ## 三、linux网络协议栈
 linux网络发送处理过程如下图所示：
-![[../picture/Pasted image 20240925212532.png]]
+<!-- ![[../picture/Pasted image 20240925212532.png]] -->
+![alt text](../picture/Pasted%20image%2020240925212532.png)
 数据被系统调用拷贝到内核态，然后经过协议栈处理后进⼊RingBuffer。随后⽹卡驱动真正将数据发送了出去。
 网络协议栈处理包括传输层处理（tcp/udp等），接着进行网络层处理（ipv4/ipv6）。
 linux网络链路层实现由各个驱动设备实现，最终通过网卡完成发送过程。
 此处以tcp协议、ipv4协议为例，简要概述linux内核网络协议栈处理报文的过程。
 
-![[../picture/Pasted image 20240926093404.png]]
+<!-- ![[../picture/Pasted image 20240926093404.png]] -->
+![alt text](../picture/Pasted%20image%2020240926093404.png)
 跨机网络通信流程总体如下：
 ### 发送过程
 #### 1 传输层实现

@@ -4,9 +4,9 @@
 ## 环境准备
 拓扑以及环境要求如实验2，
 此时arp已经生效，通过`ip neighbor show`可以看到server对应的ip以及mac地址。
-![alt text](image-8.png)
+![alt text](../picture/dpdk_image-8.png)
 而此时client 无法ping 通server。
-![alt text](image-7.png)
+![alt text](../picture/dpdk_image-7.png)
 
 ## 代码
 ```c
@@ -105,4 +105,4 @@ static __rte_noreturn void rx_process()
 
 ## 测试
 此时client1 ping `192.168.1.129`可以看到server端的回复
-![alt text](image-9.png)
+![alt text](../picture/dpdk_image-9.png)

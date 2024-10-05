@@ -7,7 +7,7 @@ OSPF（Open Shortest Path First）协议是一种链路状态路由协议，它�
 ## OSPF五种报文
 
   OSPF报文头部
-  ![alt text](image-2.png)
+  ![alt text](../picture/proto_image-2.png)
 
 #### 1. **Hello 报文**
    - **作用**：用于发现和维护邻居关系。
@@ -23,7 +23,7 @@ OSPF（Open Shortest Path First）协议是一种链路状态路由协议，它�
      - **区域 ID（Area ID）**：指定此路由器属于的 OSPF 区域。
 
    - **使用场景**：路由器发送 Hello 报文，定期确认和更新邻居关系，确保网络拓扑的变化可以被及时发现。
-  ![alt text](image-3.png)
+  ![alt text](../picture/proto_image-3.png)
 
 ---
 
@@ -41,7 +41,7 @@ OSPF（Open Shortest Path First）协议是一种链路状态路由协议，它�
      - **链路状态描述（LSA Header）**：包含每个链路状态广告（LSA）的简要描述信息。
 
    - **使用场景**：用于 OSPF 邻居在建立邻接关系时交换链路状态信息的摘要，确保路由器具有相同的 LSDB 基本结构。
-  ![alt text](image-4.png)
+  ![alt text](../picture/proto_image-4.png)
 
 ---
 
@@ -56,7 +56,7 @@ OSPF（Open Shortest Path First）协议是一种链路状态路由协议，它�
      - **Advertising Router**：生成此链路状态的路由器的 Router ID。
 
    - **使用场景**：当路由器发现 LSDB 中缺少某些 LSA 或某些 LSA 需要更新时，会发送 LSR 请求邻居提供这些信息。
-  ![alt text](image-5.png)
+  ![alt text](../picture/proto_image-5.png)
 
 ---
 
@@ -71,7 +71,7 @@ OSPF（Open Shortest Path First）协议是一种链路状态路由协议，它�
      - **LSA List**：具体包含的 LSA 列表，每个 LSA 描述了网络的某个链路状态信息。
    
    - **使用场景**：当路由器需要更新或传播链路状态信息时，它会使用 LSU 报文来发送最新的 LSA。
-  ![alt text](image-6.png)
+  ![alt text](../picture/proto_image-6.png)
 
 ---
 
@@ -84,7 +84,7 @@ OSPF（Open Shortest Path First）协议是一种链路状态路由协议，它�
      - **LSA Header**：用于确认的 LSA 的头部信息，表示确认了哪个 LSA。
 
    - **使用场景**：LSAck 报文用于确保链路状态广告的可靠传输，避免 LSA 的丢失或重复。
-  ![alt text](image-7.png)
+  ![alt text](../picture/proto_image-7.png)
 
 ---
 
@@ -146,6 +146,6 @@ vtysh
 show ip ospf neighbor
 ```
 可以观测邻居节点的建立情况
-![alt text](image-8.png)
+![alt text](../picture/proto_image-8.png)
 通过命令显示了该路由器的邻居ID、状态等信息。
 值得注意的是，该路由器的所有neighbor都为 Full/DR，意味着每条邻居链路的OSPF状态都为最终状态，并且每个邻居路由器都为DR。这是因为网络中每个路由器都与其他多个路由器通过单独的物理链路或逻辑子网连接，并且这些链路是以太网（广播型）网络，每个子网上都可能会有一个独立的 DR 选举过程。

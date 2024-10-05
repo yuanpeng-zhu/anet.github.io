@@ -34,7 +34,7 @@ ARP协议是“Address Resolution Protocol”（地址解析协议）的缩写�
 - 源协议地址（Sender Protocol Address，简称SPA）：m个字节，m由协议地址长度得到，一般为发送方IP地址。
 - 目标硬件地址（Target Hardware Address，简称THA）：n个字节，n由硬件地址长度得到，一般为目标MAC地址。
 - 目标协议地址（Target Protocol Address，简称TPA）：m个字节，m由协议地址长度得到，一般为目标IP地址。
-![alt text](image.png)
+![alt text](../picture/proto_image.png)
 
 
 ## 四、linux下修改arp表项

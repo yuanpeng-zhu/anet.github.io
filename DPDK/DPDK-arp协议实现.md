@@ -6,9 +6,9 @@
 首先删除原本client1与client2上arp表项
 删除后效果如下：
 client1:
-![alt text](image-5.png)
+![alt text](../picture/dpdk_image-5.png)
 client2:
-![alt text](image-6.png)
+![alt text](../picture/dpdk_image-6.png)
 
 ## 一、实现源码
 主要源码如下：
@@ -92,9 +92,9 @@ static __rte_noreturn void rx_process()
 
 ## 二、测试
 在client1处ping`192.168.1.129`:
-![alt text](image-7.png)
+![alt text](../picture/dpdk_image-7.png)
 发现ping不通，现象很正常，因为dpdk没有对icmp报文进行处理
 此时，查看arp表项，即发现，arp表项已经生成：
-![alt text](image-8.png)
+![alt text](../picture/dpdk_image-8.png)
 此时说明上面的两个函数`handle_arp_request`以及`send_arp_reply`已经正常运行。
 下面将实现dpdk的icmp报文回复功能。

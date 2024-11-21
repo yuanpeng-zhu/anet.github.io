@@ -62,4 +62,13 @@
 #### [2. cgroups技术](./容器/cgroups.md)
 
 
+## 三、c/cpp
+
+#### [gdb调试方法](./cpp/gdb.md)
+
+#### [gdb原理解析](./cpp/gdb原理.md)
+
+#### [ptrace](./cpp/ptrace.md)
+
+
 

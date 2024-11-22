@@ -75,6 +75,20 @@
   ```gdb
   backtrace full
   ```
+  追踪变量/设置观察点
+  ```gdb
+  watch var_name
+  ```
+
+  查看追踪的变量/观察点
+  ```
+  info watchpoints
+  ```
+
+  删除观察点
+  ```
+  delete x
+  ```
 
 - **查看变量值**：
   - 打印变量：
@@ -279,7 +293,7 @@
 ```gdb
 layout src
 ```
-![alt text](image-5.png)
+![alt text](../picture/gdb_image-5.png)
 #### **TUI 模式布局选项**
 - `layout src`：显示源码窗口。
 - `layout asm`：显示汇编代码窗口。
@@ -470,21 +484,21 @@ g++ -g -pthread -o multithread_example multithread_example.cpp
    ```gdb
    run
    ```
-   ![alt text](image.png)
+   ![alt text](../picture/gdb_image.png)
 
 4. **查看线程信息**：
    当程序运行到断点时，查看当前线程状态：
    ```gdb
    info threads
    ```
-    ![alt text](image-1.png)
+    ![alt text](../picture/gdb_image-1.png)
 
 5. **切换到特定线程**：
    如果有多个线程，可切换到某个线程上下文：
    ```gdb
    thread <thread-id>
    ```
-    ![alt text](image-2.png)
+    ![alt text](../picture/gdb_image-2.png)
 
 6. **查看调用栈**：
    查看当前线程的调用栈：
@@ -498,14 +512,14 @@ g++ -g -pthread -o multithread_example multithread_example.cpp
    step
    next
    ```
-   ![alt text](image-3.png)
+   ![alt text](../picture/gdb_image-3.png)
 
 8. **查看变量值**：
    打印局部变量或参数值：
    ```gdb
    print thread_id
    ```
-   ![alt text](image-4.png)
+   ![alt text](../picture/gdb_image-4.png)
 
 9. **同时查看所有线程的状态**：
    打印所有线程的调用栈：
